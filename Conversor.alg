@@ -6,7 +6,7 @@ Opcaomenu: inteiro
 
 inicio
 
-Escreval ("Olá por favor digite o número da opção desejada")
+Escreval ("OlÃ¡ por favor digite o nÃºmero da opÃ§Ã£o desejada")
 escreval("")
 escreval ("------Temperatura-----")
 escreval(" 1- Coverter Fahrenheit para Celcius")
@@ -20,24 +20,24 @@ escreval("5- para sair")
 escreval("")
 escreval("=")
 leia(opcaomenu)
-escreval("opção escolhida: ", opcaomenu)
+escreval("opÃ§Ã£o escolhida: ", opcaomenu)
 
 repita
    se opcaomenu =1 entao
       escreval("Quantos graus em Fahrenhait")
       leia(tempFah)
       resulCel <- (tempFah - 32) *5/9
-      escreval("A temperatura em Celcius é °", resulCel:1:2, "c°")
+      escreval("A temperatura em Celcius Ã© Â°", resulCel:1:2, "cÂ°")
       escreval("=")
-      escreval(" Deseja realizar nova conversão?, Se sim digite nova opção de menu,se não digite 5")
+      escreval(" Deseja realizar nova conversÃ£o?, Se sim digite nova opÃ§Ã£o de menu,se nÃ£o digite 5")
    senao
       se opcaomenu=2 entao
          escreval ("Quantos graus Celcius")
          leia(tempCel)
          resulFah <- ( (tempCel * (9/5)) +32)
-         escreval(" A temperatura em Fahrenheit é °", resulFah:1:2, "ºF")
+         escreval(" A temperatura em Fahrenheit Ã© Â°", resulFah:1:2, "ÂºF")
          escreval("=")
-         escreval(" Deseja realizar nova conversão?, Se sim digite nova opção de menu,se não digite 5")
+         escreval(" Deseja realizar nova conversÃ£o?, Se sim digite nova opÃ§Ã£o de menu,se nÃ£o digite 5")
 
       senao
 
@@ -51,7 +51,7 @@ repita
             escreval ("Valores em reais: R$", valoremReais: 2:2)
             escreval ("quantidade em Dolares: U$", conversao: 2:2)
             escreval("=")
-            escreval(" Deseja realizar nova conversão?, Se sim digite nova opção de menu,se não digite 5")
+            escreval(" Deseja realizar nova conversÃ£o?, Se sim digite nova opÃ§Ã£o de menu,se nÃ£o digite 5")
 
          senao
 
@@ -64,13 +64,12 @@ repita
                escreval ("Valores em dolar: U$", valorDolar: 2:2)
                escreval ("quantidade em Reais: R$", conversao: 2:2)
                escreval("=")
-               escreval(" Deseja realizar nova conversão?, Se sim digite nova opção de menu,se não digite 5")
+               escreval(" Deseja realizar nova conversÃ£o?, Se sim digite nova opÃ§Ã£o de menu,se nÃ£o digite 5")
 
             fimse
          fimse
       fimse
-      leia (opcaomenu)
-   ate opcaomenu = 5
+    
    fimse
 
 fimalgoritmo
