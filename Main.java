@@ -1,0 +1,46 @@
+package exerciciolivediscord;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int sexo; //1 para mulheres 2- para hones 
+        float altura = 0, totalAlturaMulheres = 0, maiorAltura = 0, menorAltura =0;
+        int totalMulheres = 0;
+
+        Scanner teclado = new Scanner(System.in);
+
+        for (int i = 0; i < 3; i++) {
+            //entrada de dados
+            System.out.print("Digite a altura da pessoa" + (i + 1) + ":");
+            altura = teclado.nextFloat();
+            System.out.print("Digite o sexo da pessoa(1-Mulher, 2-Homem)" + (i + 1) + ":");
+            sexo = teclado.nextInt();
+             
+            //processamento relacionado as informações mulheres 
+            if (sexo == 1) {
+                //totalMulheres = totalMulheres + 1;
+                totalMulheres++;
+                
+                //totalAulturaMulheres = totalAlturaMulheres + altura;
+                totalAlturaMulheres += altura;
+}
+                 //processo geral em relação altura
+            if (altura > maiorAltura){
+                maiorAltura = altura; 
+                
+            }    
+           if ((altura < menorAltura) || (i==0)){
+               menorAltura = altura; 
+            }
+        }
+      System.out.println("Apurando resultado..");
+        System.out.println("Total de mulher=" + totalMulheres);
+         System.out.println("Média de altura das Mulheres = " + (totalAlturaMulheres/totalMulheres));
+          System.out.println("Maior altura: " + maiorAltura + " |||| Menor altura: " + menorAltura);
+        
+        
+    }
+
+}
