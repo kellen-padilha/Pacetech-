@@ -1,46 +1,64 @@
-package exerciciolivediscord;
+
+
+package SEMANASEIS;
 
 import java.util.Scanner;
 
+
 public class Main {
 
+ 
     public static void main(String[] args) {
-        int sexo; //1 para mulheres 2- para hones 
-        float altura = 0, totalAlturaMulheres = 0, maiorAltura = 0, menorAltura =0;
-        int totalMulheres = 0;
+    Scanner leitor = new Scanner(System.in);
+        int menu = 0;
+        while (menu != 4) {
 
-        Scanner teclado = new Scanner(System.in);
+            System.out.println("Ola seja bem-vindo, digite opcao desejada");
+            System.out.println("1 - Converter Celsius para Fahrenheit");
+            System.out.println("2 - Converter Fahrenheit para Celsius");
+            System.out.println("3 - Reais para Dolares");
+            System.out.println("4 - Dólares para Reais");
 
-        for (int i = 0; i < 3; i++) {
-            //entrada de dados
-            System.out.print("Digite a altura da pessoa" + (i + 1) + ":");
-            altura = teclado.nextFloat();
-            System.out.print("Digite o sexo da pessoa(1-Mulher, 2-Homem)" + (i + 1) + ":");
-            sexo = teclado.nextInt();
-             
-            //processamento relacionado as informações mulheres 
-            if (sexo == 1) {
-                //totalMulheres = totalMulheres + 1;
-                totalMulheres++;
-                
-                //totalAulturaMulheres = totalAlturaMulheres + altura;
-                totalAlturaMulheres += altura;
-}
-                 //processo geral em relação altura
-            if (altura > maiorAltura){
-                maiorAltura = altura; 
-                
-            }    
-           if ((altura < menorAltura) || (i==0)){
-               menorAltura = altura; 
+            int opcao = leitor.nextInt();
+            switch (opcao) {
+                case 1 -> {
+                    System.out.println("Digite a temperatura em Celsius: ");
+                    float celsius = leitor.nextFloat();
+                    float fahrenheit = (float) ((celsius * 1.8) + 32);
+                    System.out.printf("A temperatura em fahrenheit é %.0fºF.", fahrenheit);
+                }
+
+                case 2 -> {
+                    System.out.println("Digite a temperatura em Fahrenheit: ");
+                    float fahrenheit2 = leitor.nextFloat();
+                    float celsius2 = (float) ((fahrenheit2 - 32) / 1.8);
+                    System.out.printf("A temperatura em Celsius e %.0fºC.", celsius2);
+                }
+                case 3 -> {
+                    System.out.println("Digite o valor em reais: ");
+                    float reais = leitor.nextFloat();
+                    System.out.println("Digite a cotação do dólar: ");
+                    float cotacao = leitor.nextFloat();
+
+                    float dolares = reais / cotacao;
+                    System.out.printf("O valor em dólares é U$%.2f.", dolares);
+                }
+                case 4 -> {
+                    System.out.println("Digite o valor em dólares: ");
+                    float dolares2 = leitor.nextFloat();
+                    System.out.println("Digite a cotação do dólar: ");
+                    float cotacao = leitor.nextFloat();
+
+                    float reais2 = dolares2 * cotacao;
+                    System.out.printf("O valor em reais é R$%.2f.", reais2);
+                }
+
+                default -> System.out.println("Opcao Invalida");
             }
+            System.out.println("\nDeseja realizar mais alguma conversão?");
+            System.out.println("1 - Sim / 2 - Nao");
+            menu = leitor.nextInt();
         }
-      System.out.println("Apurando resultado..");
-        System.out.println("Total de mulher=" + totalMulheres);
-         System.out.println("Média de altura das Mulheres = " + (totalAlturaMulheres/totalMulheres));
-          System.out.println("Maior altura: " + maiorAltura + " |||| Menor altura: " + menorAltura);
-        
-        
-    }
 
+    }
 }
