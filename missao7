@@ -1,0 +1,37 @@
+package MISSAOSEMANA7;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Empregado a = new Empregado("", "", 0f);
+        Empregado b = new Empregado("", "", 0f);
+
+        Scanner leitor = new Scanner(System.in);
+        System.out.println("Informe o Nome: ");
+       a.setNome(leitor.next());
+        System.out.println("Informe Sobrenome: ");
+        a.setSobrenome(leitor.next());
+        System.out.println("Informe Salario Atual: ");
+        a.setSalarioMensal(leitor.nextFloat());
+
+        System.out.println("Informe o Nome: ");
+        b.setNome(leitor.next());
+        System.out.println("Informe Sobrenome: ");
+        b.setSobrenome(leitor.next());
+        System.out.println("Informe Salario Atua: ");
+        b.setSalarioMensal(leitor.nextFloat());
+
+        System.out.println("Nome do Empregado: " + a.getNome() + " " + a.getSobrenome());
+        System.out.println("Salario  Anual: " + "R$" + a.salarioAnual());
+        System.out.println("Salário Anual com aumento de 10%: " + "R$" + a.aumento());
+
+        System.out.println("Nome do Empregado: " + b.getNome() + " "+ b.getSobrenome());
+        System.out.println("Salario  Anual: " + "R$" + b.salarioAnual());
+        System.out.println("Salario Anual com aumento de 10%: " + "R$" + b.aumento());
+
+    }
+
+}
